@@ -24,7 +24,7 @@ public class Juego {
 
     public void actualizaRecord() {
         record++;
-        System.out.println("¡Nuevo record! Record actual: " + record);
+        System.out.println("Nuevo record! Record actual: " + record);
     }
 
     public boolean quitaVida() {
@@ -33,3 +33,4 @@ public class Juego {
         return numeroDeVidas > 0;
     }
 }
+

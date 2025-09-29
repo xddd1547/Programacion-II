@@ -22,31 +22,32 @@ public class JuegoAdivinaNumero extends Juego {
     public void juega() {
         reiniciaPartida();
         Random random = new Random();
-        numeroAAdivinar = random.nextInt(11); // entre 0 y 10
+        numeroAAdivinar = random.nextInt(11);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Adivina un número entre 0 y 10:");
+        System.out.println("Adivina un numero entre 0 y 10:");
 
         while (true) {
             int intento = sc.nextInt();
 
             if (intento == numeroAAdivinar) {
-                System.out.println("¡Acertaste!");
+                System.out.println("Acertaste!");
                 actualizaRecord();
                 break;
             } else {
                 if (quitaVida()) {
                     if (intento < numeroAAdivinar) {
-                        System.out.println("El número a adivinar es MAYOR.");
+                        System.out.println("El numero a adivinar es MAYOR.");
                     } else {
-                        System.out.println("El número a adivinar es MENOR.");
+                        System.out.println("El numero a adivinar es MENOR.");
                     }
                     System.out.println("Intenta de nuevo:");
                 } else {
-                    System.out.println("¡Perdiste! El número era: " + numeroAAdivinar);
+                    System.out.println("Perdiste! El numero era: " + numeroAAdivinar);
                     break;
                 }
             }
         }
     }
 }
+

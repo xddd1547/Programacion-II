@@ -30,33 +30,34 @@ public class JuegoAdivinaNumero extends Juego {
         numeroAAdivinar = random.nextInt(11);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Adivina un número entre 0 y 10:");
+        System.out.println("Adivina un numero entre 0 y 10:");
 
         while (true) {
             int intento = sc.nextInt();
 
             if (!validaNumero(intento)) {
-                System.out.println("Número inválido. Intenta de nuevo (0 a 10).");
+                System.out.println("Numero invalido. Intenta de nuevo (0 a 10).");
                 continue;
             }
 
             if (intento == numeroAAdivinar) {
-                System.out.println("¡Acertaste!");
+                System.out.println("Acertaste!");
                 actualizaRecord();
                 break;
             } else {
                 if (quitaVida()) {
                     if (intento < numeroAAdivinar) {
-                        System.out.println("El número a adivinar es MAYOR.");
+                        System.out.println("El numero a adivinar es MAYOR.");
                     } else {
-                        System.out.println("El número a adivinar es MENOR.");
+                        System.out.println("El numero a adivinar es MENOR.");
                     }
                     System.out.println("Intenta de nuevo:");
                 } else {
-                    System.out.println("¡Perdiste! El número era: " + numeroAAdivinar);
+                    System.out.println("Perdiste! El numero era: " + numeroAAdivinar);
                     break;
                 }
             }
         }
     }
 }
+

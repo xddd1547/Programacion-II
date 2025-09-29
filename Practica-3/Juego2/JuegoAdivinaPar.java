@@ -20,7 +20,8 @@ public class JuegoAdivinaPar extends JuegoAdivinaNumero {
         if (n >= 0 && n <= 10 && n % 2 == 0) {
             return true;
         }
-        System.out.println("Error: Solo puedes ingresar números PARES entre 0 y 10.");
+        System.out.println("Error: Solo puedes ingresar numeros PARES entre 0 y 10.");
         return false;
     }
 }
+
